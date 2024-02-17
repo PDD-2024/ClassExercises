@@ -1,0 +1,1 @@
+Compile and link both files using Ninja
