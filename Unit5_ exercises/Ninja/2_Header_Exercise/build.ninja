@@ -1,0 +1,10 @@
+rule compile
+  command = g++ -Wall -c $in -o $out
+
+rule link
+  command = g++ $in -o $out
+
+build header.o : compile header.cpp
+build main.o : compile main.cpp
+build output : link main.o header.o
+
